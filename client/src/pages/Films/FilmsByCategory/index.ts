@@ -1,0 +1,1 @@
+export { FilmsByCategory } from "./FilmsByCategory";

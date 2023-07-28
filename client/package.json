@@ -1,0 +1,99 @@
+{
+    "name": "client",
+    "version": "0.1.0",
+    "private": true,
+    "main": "webpack.config.js",
+    "dependencies": {
+        "@emotion/react": "^11.10.5",
+        "@emotion/styled": "^11.10.5",
+        "@hookform/resolvers": "^2.9.10",
+        "@mui/icons-material": "^5.10.9",
+        "@mui/lab": "^5.0.0-alpha.106",
+        "@mui/material": "^5.10.12",
+        "@mui/styled-engine-sc": "^5.10.6",
+        "@mui/x-date-pickers": "^5.0.15",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "@types/jest": "^27.5.2",
+        "@types/node": "^16.18.3",
+        "@types/react": "^18.0.24",
+        "@types/react-dom": "^18.0.8",
+        "@typescript-eslint/eslint-plugin": "^5.42.1",
+        "axios": "^1.1.3",
+        "fluent-ffmpeg": "^2.1.2",
+        "jwt-decode": "^3.1.2",
+        "mobx": "^6.6.2",
+        "mobx-react-lite": "^3.4.0",
+        "moment": "^2.29.4",
+        "path": "^0.12.7",
+        "query-string": "^8.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-hook-form": "^7.39.1",
+        "react-jwt": "^1.1.7",
+        "react-loader-spinner": "^5.3.4",
+        "react-router-dom": "^6.4.2",
+        "react-scripts": "5.0.1",
+        "react-toastify": "^9.1.0",
+        "styled-components": "^5.3.6",
+        "ts-loader": "^9.4.1",
+        "typescript": "^4.8.4",
+        "use-file-picker": "^1.5.1",
+        "web-vitals": "^2.1.4",
+        "webpack": "^5.74.0",
+        "yup": "^0.32.11"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "lint": "eslint ./src",
+        "lint:fix": "eslint ./src --fix"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/core": "^7.19.6",
+        "@babel/eslint-parser": "^7.19.1",
+        "@types/json-server": "^0.14.4",
+        "babel-plugin-module-resolver": "^4.1.0",
+        "eslint": "^8.26.0",
+        "eslint-import-resolver-alias": "^1.1.2",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-react": "^7.31.10",
+        "git-commit-msg-linter": "^4.2.1",
+        "husky": "^4.3.8",
+        "lint-staged": "^13.0.3",
+        "tsconfig-paths-webpack-plugin": "^4.0.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "pre-push": "npm run test & lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.ts, *.tsx": [
+            "npm run lint:fix",
+            "git add ."
+        ]
+    }
+}
